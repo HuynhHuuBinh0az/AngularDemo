@@ -20,12 +20,13 @@ export class MovieService {
     if(name){
       url = this.API+`findbyname?name=`+name;
     }
-    if (id) {
+    else if (id) {
       url = this.API+`findbyid?id=`+id;
     }
     else {
       url = this.API+`getall`;
     }
+    console.log(url);
     return this.Http.get(url);
   }
 

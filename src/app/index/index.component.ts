@@ -26,8 +26,9 @@ export class IndexComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe(data => {
       this.name = data['name'];
       this.id = data['id'];
-      let reset : boolean = data.reset;
-      if (reset) {
+      let reset : boolean = false;
+      reset = data.reset;
+      if (reset == true) {
         this.movieService.resetDB().subscribe(data => {
           this.movies = data['data'];
           console.log(this.movies);
