@@ -27,8 +27,8 @@ export class IndexComponent implements OnInit {
       this.name = data['name'];
       this.id = data['id'];
       let reset : boolean = false;
-      reset = data.reset;
-      if (reset == true) {
+      reset = data['reset'];
+      if (reset) {
         this.movieService.resetDB().subscribe(data => {
           this.movies = data['data'];
           console.log(this.movies);
