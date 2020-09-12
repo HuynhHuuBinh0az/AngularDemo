@@ -1,0 +1,31 @@
+
+<form method="POST">
+  <legend class="text-center">Add Movie</legend>
+
+  <div class="form-group">
+    <label>Description: </label>
+    <input type="text" class="form-control" [(ngModel)]="movie.description" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Duration:  </label>
+    <input type="number" class="form-control" [(ngModel)]="movie.duration" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>ID:  </label>
+    <input type="number" class="form-control" [(ngModel)]="movie.id" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Movie Name:  </label>
+    <input type="text" class="form-control" [(ngModel)]="movie.movieName" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Status:  </label>
+    <input type="text" class="form-control" [(ngModel)]="movie.status" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>ThumbUrl:  </label>
+    <input type="text" class="form-control" [(ngModel)]="movie.thumbUrl" [ngModelOptions]="{standalone: true}">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="addMovie()">Add Movie</button>
+</form>
